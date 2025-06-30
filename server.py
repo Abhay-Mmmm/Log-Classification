@@ -3,7 +3,7 @@ from classify import classify_log
 
 st.title("Log Classifier")
 
-source = st.text_input("Log Source", "LegacyCRM")
+source = st.text_input("Log Source", "")
 log_message = st.text_area("Log Message", "")
 
 if st.button("Classify Log"):
