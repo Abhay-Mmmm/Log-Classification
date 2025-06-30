@@ -32,7 +32,7 @@ This project implements a hybrid log classification system, combining three comp
    - Stores the saved models, including Sentence Transformer embeddings and the Logistic Regression model.
 
 3. **`resources/`**:
-   - This folder contains resource files such as test CSV files, test files, images, etc.
+   - This folder contains resource files such as test CSV files, images, etc.
 
 4. **Root Directory**:
    - Contains the Streamlit server code (`server.py`).
