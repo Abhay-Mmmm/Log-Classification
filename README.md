@@ -1,4 +1,3 @@
-
 # Log Classification With Hybrid Classification Framework
 
 This project implements a hybrid log classification system, combining three complementary approaches to handle varying levels of complexity in log patterns. The classification methods ensure flexibility and effectiveness in processing predictable, complex, and poorly-labeled data patterns.
@@ -33,10 +32,10 @@ This project implements a hybrid log classification system, combining three comp
    - Stores the saved models, including Sentence Transformer embeddings and the Logistic Regression model.
 
 3. **`resources/`**:
-   - This folder contains resource files such as test CSV files, output files, images, etc.
+   - This folder contains resource files such as test CSV files, test files, images, etc.
 
 4. **Root Directory**:
-   - Contains the FastAPI server code (`server.py`).
+   - Contains the Streamlit server code (`server.py`).
 
 ---
 
@@ -49,26 +48,24 @@ This project implements a hybrid log classification system, combining three comp
    pip install -r requirements.txt
    ```
 
-2. **Run the FastAPI Server**:
-   To start the server, use the following command:
+2. **Run the Streamlit App**:
+   To start the interactive log classification app, use the following command:
 
    ```bash
-   uvicorn server:app --reload
+   streamlit run server.py
    ```
 
-   Once the server is running, you can access the API at:
-   - `http://127.0.0.1:8000/` (Main endpoint)
-   - `http://127.0.0.1:8000/docs` (Interactive Swagger documentation)
-   - `http://127.0.0.1:8000/redoc` (Alternative API documentation)
+   This will open a web interface in your browser where you can input log sources and log messages for classification.
 
 ---
 
 ## Usage
 
-Upload a CSV file containing logs to the FastAPI endpoint for classification. Ensure the file has the following columns:
-- `source`
-- `log_message`
+Use the Streamlit web interface to classify logs one at a time:
+- Enter the `source` (e.g., `LegacyCRM`, `ModernCRM`, etc.).
+- Enter the `log_message` you want to classify.
+- Click the **Classify Log** button to see the predicted label for your log message.
 
-The output will be a CSV file with an additional column `target_label`, which represents the classified label for each log entry.
+The result will be displayed directly in the browser.
 
 ---
