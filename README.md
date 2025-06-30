@@ -69,3 +69,4 @@ Use the Streamlit web interface to classify logs one at a time:
 The result will be displayed directly in the browser.
 
 ---
+Made with ❤️ by Abhay
